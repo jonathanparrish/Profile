@@ -1,1 +1,28 @@
-<h1> Here it is </h1>
+<link href="https://assets-cdn.github.com/assets/github-71026dc447d12cdf19996cb5d0313a4993f064d46a3dc90bec7724a3c9eaf344.css" media="all" rel="stylesheet" />
+<link href="https://assets-cdn.github.com/assets/github2-cdf30895e7e63a6a3495f768847199795affd3511d5f37a8fd30968750977434.css" media="all" rel="stylesheet" />
+
+<div class="container">
+  <div class="columns profilecols js-username" data-name="jonathanparrish">
+    <div class="column one-fourth vcard" itemscope itemtype="http://schema.org/Person">
+        <a href="/account" aria-label="Change your avatar" class="vcard-avatar tooltipped tooltipped-s"><img alt="" class="avatar" data-user="9451793" height="230" src="https://avatars2.githubusercontent.com/u/9451793?v=3&amp;s=460" width="230" /></a>
+
+      <h1 class="vcard-names">
+  <span class="vcard-fullname" itemprop="name">Jonathan Parrish</span>
+  <span class="vcard-username" itemprop="additionalName">jonathanparrish</span>
+</h1>
+
+
+  <%= image_tag @profile_info, :height => "230" %>
+  <br>
+  <h2>Jonathan Parrish</h2>
+  <h3>jonathan parrish</h3>
+
+    <% @repository_info.each do |r|  %>
+    <div class="container">
+      <h3 class="repo-list-name"><%= r["name"] %></h3>
+      <p>Ruby <span class="octicon octicon-star"></span> <%= r["stargazers_count"] %></p>
+      <p>Forks <span class="octicon octicon-git-branch"></span> <%= r["forks_count"] %></p>
+      <p>Updated at: <%= r["updated_at"] %></p>
+    </div>
+    <% end %>
+</body>
